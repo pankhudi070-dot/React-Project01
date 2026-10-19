@@ -1,0 +1,111 @@
+#root {
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          text-align: left !important;
+          width: 100% !important;
+        }
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          background-color: #ffffff !important;
+          color: #0f172a !important;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+          overflow-x: hidden;
+        }
+        /* Ensure text visibility if gradient clipping is unsupported */
+        .gradient-headline {
+          color: #0284c7;
+          background: linear-gradient(to right, #0891b2, #0284c7, #2563eb);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        @supports not (-webkit-background-clip: text) {
+          .gradient-headline {
+            color: #0284c7 !important;
+          }
+        }
+        button { cursor: pointer; }
+
+
+@tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+   #root {
+     width: 100%;
+     max-width: 100% !important;
+     margin: 0 !important;
+     padding: 0 !important;
+     text-align: left !important;
+   }
+ 
+        @keyframes floatSlow {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        @keyframes liquidWave {
+          0% { transform: translateX(0) scaleY(1); }
+          50% { transform: translateX(-25%) scaleY(1.08); }
+          100% { transform: translateX(-50%) scaleY(1); }
+        }
+        @keyframes shimmerGlow {
+          0% { opacity: 0.3; transform: translateX(-100%); }
+          100% { opacity: 0.9; transform: translateX(200%); }
+        }
+        @keyframes pulseRing {
+          0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.45); }
+          70% { transform: scale(1); box-shadow: 0 0 0 16px rgba(6, 182, 212, 0); }
+          100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+        @keyframes bubbleRise {
+          0% { transform: translateY(100%) scale(0.5); opacity: 0; }
+          50% { opacity: 0.8; }
+          100% { transform: translateY(-120%) scale(1.1); opacity: 0; }
+        }
+        .animate-float {
+          animation: floatSlow 5s ease-in-out infinite;
+        }
+        .animate-pulse-ring {
+          animation: pulseRing 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .bubble-1 {
+          animation: bubbleRise 3.5s infinite ease-in;
+          left: 20%;
+          animation-delay: 0.2s;
+        }
+        .bubble-2 {
+          animation: bubbleRise 4.2s infinite ease-in;
+          left: 55%;
+          animation-delay: 1.4s;
+        }
+        .bubble-3 {
+          animation: bubbleRise 3.8s infinite ease-in;
+          left: 75%;
+          animation-delay: 0.8s;
+        }
+        .glass-specular {
+          background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.3) 100%);
+        }
+        #root {
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          text-align: left !important;
+          width: 100% !important;
+        }
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          background-color: #ffffff !important;
+          color: #0f172a !important;
+          overflow-x: hidden;
+        }
+        button { cursor: pointer; }
+    
